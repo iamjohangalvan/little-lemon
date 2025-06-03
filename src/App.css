@@ -1,55 +1,48 @@
-.header {
+/* estilos base */
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flex {
   display: flex;
+}
+
+.evenly {
+  justify-content: space-evenly;
+}
+
+.center {
   justify-content: center;
-  margin: 1rem;
 }
 
-ul {
-  display: flex;
-  list-style: none;
-  font-family: "Karla", sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding-left: 4rem;
+.between {
+  justify-content: space-between;
 }
 
-li {
-  margin: 0 1rem;
-}
-
-.logo {
-  padding-top: 0.5rem;
+.align-center {
+  align-items: center;
 }
 
 a {
   text-decoration: none;
-  color: #495E57;
+  color: #495e57;
 }
 
-a:hover {
-  background-color: #F4CE14;
-  padding: 0.4rem 0.75rem;
-  transition: 0.5s;
-  color: #495E57;
-  border-radius: 0.5rem;
+button {
+  background-color: #f4ce14;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  color: #495e57;
+  border: none;
+  cursor: pointer;
 }
 
-.header img {
-  width: 10rem;
-}
-
-.main {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #495E57;
-  padding: 1.5rem;
-  max-height: 18rem;
-
-
-}
-
-.main1 {
-  margin-left: 3rem;
+button:hover {
+  background-color: #dec548;
 }
 
 h1 {
@@ -58,11 +51,52 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 3.75rem;
-  color: #F4CE14;
+  color: #f4ce14;
   margin: 0;
 }
 
-.main1 h2 {
+/* final estilos base */
+
+/* estilos del header */
+
+.header {
+  padding: 1rem 0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+.header .nav a:hover {
+  background-color: #f4ce14;
+  padding: 0.4rem 0.75rem;
+  transition: 0.5s;
+  color: #495e57;
+  border-radius: 0.5rem;
+}
+
+.header img {
+  width: 12rem;
+}
+
+/* fin estilos del header */
+
+/* estilos del hero */
+.hero {
+  background-color: #495e57;
+  padding: 1.5rem;
+  max-height: 18rem;
+}
+
+.content h2 {
   color: white;
   margin: 0;
   font-family: "Markazi Text", serif;
@@ -72,91 +106,47 @@ h1 {
   font-size: 2.5rem;
   line-height: 0.2rem;
   margin-bottom: 1.75rem;
-
 }
 
-p {
+.hero img {
+  width: 22rem;
+  height: 24rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.hero p {
   color: white;
   font-family: "Karla", sans-serif;
   line-height: 1.5rem;
   font-size: 1.2rem;
 }
 
-button {
-  background-color: #F4CE14;
-  font-family: "Karla", sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border-radius: 20px;
-  color: #495E57
-}
+/* final estilos del hero */
 
-button:hover {
-  background-color: #dec548;
-}
+/* estilos de los cards */
 
-.main2 img {
-  width: 22rem;
-  height: 24rem;
-  object-fit: cover;
-  border-radius: 1.5rem;
-  margin-right: 3rem;
-}
-
-.main3 {
-  display: flex;
-  justify-content: space-evenly;
+.cards-section {
   margin-top: 7rem;
   margin-bottom: 2.5rem;
 }
 
-.main4 h2 {
-  color: black;
-  font-size: 4rem;
-  margin: 0 0 0 6rem;
-  font-family: "Markazi Text", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.main5 {
-  margin-top: 0.75rem;
-}
-
-.main5 button {
-  background-color: #F4CE14;
-  font-family: "Karla", sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 1rem 2.5rem;
-  border-radius: 15px;
-  margin-right: 6rem;
-}
-
-.main5 button:hover {
-  background-color: #dec548;
-}
-
-
 .cards {
   display: grid;
-  grid-template-columns: 16.5rem 16.5rem 16.5rem;
+  grid-template-columns: 17.5rem 17.5rem 17.5rem;
   justify-content: center;
-  column-gap: 1.5rem;
+  column-gap: 2rem;
 }
 
 .card img {
-  width: 16.5rem;
+  width: 17.5rem;
   height: 14rem;
   object-fit: cover;
 }
 
-
 .card {
   background-color: #edefee;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -165,7 +155,7 @@ button:hover {
   transition: 0.5s;
 }
 
-.card-food p {
+.card-food > p {
   font-family: "Karla", sans-serif;
   font-size: 1rem;
   margin: 2rem 0;
@@ -173,8 +163,9 @@ button:hover {
 }
 
 .price {
-  color: #EE9972;
+  color: #ee9972;
   margin: 0;
+  font-weight: bold;
 }
 
 .card-title {
@@ -199,10 +190,64 @@ button:hover {
 .delivery img {
   width: 1.5rem;
   height: 1.5rem;
-  margin-top: 2rem;
-  padding-left: 0.5rem;
+}
+.delivery {
+  margin: 1rem 0;
 }
 
-.delivery {
-  display: flex;
+.delivery a {
+  gap: 0.75rem;
+  cursor: pointer;
+  max-width: fit-content;
+}
+
+.delivery a:hover {
+  background-color: #f4ce14;
+  padding: 0.4rem 0.75rem;
+  transition: 0.5s;
+  color: #495e57;
+  border-radius: 0.5rem;
+}
+
+.delivery p {
+  margin: 0;
+}
+
+.specials h2 {
+  color: black;
+  font-size: 4rem;
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.banner {
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.banner .menu-bottom button {
+  background-color: #f4ce14;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  margin-right: 6rem;
+}
+
+.banner .menu-bottom button:hover {
+  background-color: #dec548;
+}
+
+/* fin estilos de los cards */
+
+.form p {
+  color: black;
+}
+
+.form h2 {
+  color: black;
 }

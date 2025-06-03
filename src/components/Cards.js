@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 function Cards() {
   return (
     <div>
-      <div className="main3">
-        <div className="main4">
+      <div className="banner main-container flex between align-center ">
+        <div className="specials">
           <h2>This weeks specials!</h2>
         </div>
-        <div className="main5">
+        <div className="menu-button">
           <button>Online Menu</button>
         </div>
       </div>
@@ -17,10 +19,19 @@ function Cards() {
             <p className="price">$12.99</p>
           </div>
           <div className="card-food">
-            <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
+            <p>
+              The famous greek salad of crispy lettuce, peppers, olives and our
+              Chicago style feta cheese, garnished with crunchy garlic and
+              rosemary croutons.
+            </p>
+
             <div className="delivery">
-              <p><b>Order a delivery</b></p>
-              <img src="assets/Truck.svg" alt="truck" />
+              <Link to={"/order"} className="flex align-center">
+                <p>
+                  <b>Order a delivery</b>
+                </p>
+                <img src="assets/Truck.svg" alt="truck" />
+              </Link>
             </div>
           </div>
         </div>
@@ -31,10 +42,19 @@ function Cards() {
             <p className="price">$5.99</p>
           </div>
           <div className="card-food">
-            <p>The famous greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
+            <p>
+              The famous greek salad of crispy lettuce, peppers, olives, and our
+              Chicago style feta cheese, garnished with crunchy garlic and
+              rosemary croutons.
+            </p>
+
             <div className="delivery">
-              <p><b>Order a delivery</b></p>
-              <img src="assets/Truck.svg" alt="truck" />
+              <Link to={"/order"} className="flex align-center">
+                <p>
+                  <b>Order a delivery</b>
+                </p>
+                <img src="assets/Truck.svg" alt="truck" />
+              </Link>
             </div>
           </div>
         </div>
@@ -45,10 +65,19 @@ function Cards() {
             <p className="price">$5.00</p>
           </div>
           <div className="card-food">
-            <p>The famous greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
+            <p>
+              The famous greek salad of crispy lettuce, peppers, olives, and our
+              Chicago style feta cheese, garnished with crunchy garlic and
+              rosemary croutons.
+            </p>
+
             <div className="delivery">
-              <p><b>Order a delivery</b></p>
-              <img src="assets/Truck.svg" alt="truck" />
+              <Link to={"/order"} className="flex align-center">
+                <p>
+                  <b>Order a delivery</b>
+                </p>
+                <img src="assets/Truck.svg" alt="truck" />
+              </Link>
             </div>
           </div>
         </div>
